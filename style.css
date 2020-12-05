@@ -2,6 +2,10 @@
 Table Of Contents:
 1. General
 2. Navigation
+3. Hero
+4. Buttons
+5. Forms
+   Media Queries
 */
 
 /*
@@ -11,11 +15,36 @@ Table Of Contents:
 body {
     padding: 0;
     margin: 0;
+    color: #ffffff;
+}
+
+h2 {
+    color: rgb(200, 110, 50);
+    font-size: 2.75rem;
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+p {
+    font-size: 1.5rem;
 }
 
 section {
-    padding: 2rem;
+    padding: 2rem 3rem;
+    background: rgb(40, 40, 40);
+    top: -100px;
 }
+
+
+section:nth-of-type(2n){
+    background: rgb(50, 50, 50);
+}
+
+/*
+section:nth-of-type(2n) h2 {
+    color: rgb(45, 0, 60);
+}
+*/
 
 /*
 2. Navigation
@@ -29,8 +58,8 @@ nav {
     right: 0;
     top: 0;
     padding: 0 5%;
-    background-color: #3e65da;
-    height: 100px;
+    background-color: rgba(45, 0, 60, 0.7);
+    height: 75px;
 }
 
 nav .logo {
@@ -39,8 +68,11 @@ nav .logo {
     height: 100%;
     display: flex;
     align-items: center;
-    font-size: 24px;
-    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+nav .logo a {
+    color: rgb(200, 110, 50)
 }
 
 nav .links {
@@ -56,6 +88,11 @@ nav .links {
 
 nav .links li {
     list-style: none;
+    padding: 0 1em;
+}
+
+nav .links li:hover {
+    border-bottom: 2px solid white;
 }
 
 nav a {
@@ -85,19 +122,19 @@ nav .icon-burger .line {
 }
 
 .blank-nav {
-    height: 100px;
-    background-color: 3e65da;
+    height: 75px;
+    background-color: rgb(40, 0, 60);
 }
 
 /*
-2. Hero
+3. Hero
 */
 .hero {
     margin: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("assets/river.jpg");
-    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url("assets/foliage1.jpg");
+    background-color: rgba(60, 30, 0, 0.8);
     background-blend-mode: multiply;
     color: #ffffff;
     display: flex;
@@ -119,11 +156,18 @@ nav .icon-burger .line {
 }
 
 /*
-3. Buttons
+4. Buttons
 */
+
+.btn {
+    text-decoration: none;
+    margin: 0.25rem;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
 .btn-lg {
     color: #ffffff;
-    text-decoration: none;
     margin: 0.5rem;
     padding: 0.8rem;
     background: blue;
@@ -131,18 +175,36 @@ nav .icon-burger .line {
     border: 2px solid #ffffff;
 }
 
+.btn-primary {
+    background-color: rgb(200, 110, 50);
+    color: rgb(40, 0, 60);
+}
+
 .btn-tr {
     background: rgba(255, 255, 255, 0.1);
 }
 
 /*
-4. Forms
+5. Forms
 */
  form {
-     padding: 0 15%;
+     margin: 0 10%;
+     padding: 1em;
+     background-color: rgb(40, 0, 60);
+     border-radius: 0.5em;
  }
 
-input, textarea {
+ form h3 {
+     color: rgb(200, 110, 50);
+     font-size: 2em;
+ }
+
+.contact-form input, .contact-form textarea {
+    background: rgb(200, 110, 50);
+    color: rgb(40, 0, 60);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
     display: block;
     width: 100%;
 }
