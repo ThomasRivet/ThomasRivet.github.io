@@ -220,7 +220,7 @@ nav .icon-burger .line {
 .card {
     background-color: rgb(40, 0, 60);
     border: 2px solid rgb(200, 110, 50);
-    border-radius: 1em;
+    border-radius: 0 2em;
     overflow: hidden;
 }
 
@@ -248,7 +248,7 @@ nav .icon-burger .line {
 .quote {
     background-color: rgb(200, 110, 50);
     border: 2px solid rgb(40, 0, 60);
-    border-radius: 1em;
+    border-radius: 0 1em;
     display: flex;
     padding: 0.5rem;
 }
@@ -318,5 +318,9 @@ blockquote {
 
     nav :checked ~ .links {
         bottom: 0;
+    }
+
+    .container {
+        grid-template-columns: repeat(1, 1fr)
     }
 }
